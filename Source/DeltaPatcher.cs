@@ -8,11 +8,11 @@ namespace Promorphosis.Common.Helpers
    /// <typeparam name="T"></typeparam>
    public class DeltaPatcher<T> : DynamicObject
    {
-      // Has the list of properties that can be patched.
-      // Provides us flexibility that certain properties can be skipped.
+      // Has the cached list of properties that can be patched.
       private static Dictionary<string, PropertyInfo> m_patchableProperties = null;
 
-      // Save set values. We will use this to apply patch to the target base item.
+      // Save property values set on this instnace. We will use these to apply
+      // patch to target base item.
       Dictionary<string, object> m_setValues = new Dictionary<string, object>();
 
       /// <summary>
