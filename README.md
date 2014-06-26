@@ -10,13 +10,13 @@ I have borrowed the NotPatchableAttribute marker attribute from Asp.netMVCPatchE
         public class Appointment
         {
                 [NotPatchable]
-                public int ID { get; set; }
+                public Guid ID { get; set; }
 
                 [NotPatchable]
-                public int DoctorId { get; set; }
+                public Guid DoctorId { get; set; }
 
                 [NotPatchable]
-                public int PatientId { get; set; }
+                public Guid PatientId { get; set; }
 
                 public Status AppointmentStatus { get; set; }
 
