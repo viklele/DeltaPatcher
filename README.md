@@ -7,7 +7,7 @@ I started with Asp.netMVCPatchExample (https://github.com/rikvanmechelen/Asp.net
 
 I have borrowed the NotPatchableAttribute marker attribute from Asp.netMVCPatchExample.  It gives you a flexibility to skip patching properties that you don't want to modify.
 
-        public class Appointment : AbstractModel
+        public class Appointment
         {
                 [NotPatchable]
                 public int ID { get; set; }
