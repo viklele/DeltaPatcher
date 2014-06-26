@@ -20,6 +20,8 @@ namespace Promorphosis.Common.Helpers
       /// </summary>
       public DeltaPatcher()
       {
+         // cache patchable properties for later use, we don't have to
+         // look for them in every instance of T
          if (m_patchableProperties == null)
          {
             m_patchableProperties = new Dictionary<string, PropertyInfo>();
@@ -30,7 +32,7 @@ namespace Promorphosis.Common.Helpers
             {
                 if (prop.CanWrite)
                 {
-                    // create dynamic properties of Delta
+                    // Skip not patchable properties
                     var attr = prop.GetCustomAttribute(typeof(NotPatchableAttribute));
                     if (attr == null)
                     {
