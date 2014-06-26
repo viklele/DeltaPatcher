@@ -7,23 +7,23 @@ I started with Asp.netMVCPatchExample (https://github.com/rikvanmechelen/Asp.net
 
 I have borrowed the NotPatchableAttribute marker attribute from Asp.netMVCPatchExample.  It gives you a flexibility to skip patching properties that you don't want to modify.
 
-public class Appointment : AbstractModel
-{
-        [NotPatchable]
-        public int ID { get; set; }
+        public class Appointment : AbstractModel
+        {
+                [NotPatchable]
+                public int ID { get; set; }
 
-        [NotPatchable]
-        public int DoctorId { get; set; }
+                [NotPatchable]
+                public int DoctorId { get; set; }
 
-        [NotPatchable]
-        public int PatientId { get; set; }
+                [NotPatchable]
+                public int PatientId { get; set; }
 
-        public Status AppointmentStatus { get; set; }
+                public Status AppointmentStatus { get; set; }
 
-        public DateTime ScheduleAt { get; set; }
+                public DateTime ScheduleAt { get; set; }
 
-        public int Duration { get; set; }
-}
+                public int Duration { get; set; }
+        }
 
 
 I am caching PropInfo of patchable properties to improve performance when you repeatedly use the patcher for same type of object.
