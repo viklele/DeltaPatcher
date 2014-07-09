@@ -3,7 +3,7 @@ DeltaPatcher
 
 A minimalist implementation of patch method, similar to the Patch from Delta of oData.
 
-I started with Asp.netMVCPatchExample (https://github.com/rikvanmechelen/Asp.netMVCPatchExample), and realized that non generics based delta patcher will force using either static methods or using a standard base class. So, I decided to roll out a generics based patcher using DynamicObject. 
+I started with Asp.netMVCPatchExample (https://github.com/rikvanmechelen/Asp.netMVCPatchExample), and realized that non generics based delta patcher will force using either static methods or using a specific base class. So, I decided to roll out a generics based patcher using DynamicObject. 
 
 I have borrowed the NotPatchableAttribute marker attribute from Asp.netMVCPatchExample.  It gives you flexibility to skip patching properties that you don't want to modify.
 
