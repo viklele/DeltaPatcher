@@ -120,7 +120,7 @@ namespace Promorphosis.Common.Helpers
    }
 
    /// <summary>
-   /// Marker attribute to indicate that a particular property should not be patched.
+   /// Property attribute to mark a particular property as non-patchable.
    /// </summary>
    public class NotPatchableAttribute : Attribute 
    { 
